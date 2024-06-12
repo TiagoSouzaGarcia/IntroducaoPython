@@ -1,4 +1,4 @@
-objeto_zip = zip([1,2,3])
+objeto_zip = zip([1,2,3], ['Adamastor', 'Caio', "Flavio"])
 
 print(list(objeto_zip))
 
@@ -24,3 +24,8 @@ nomes = list(nomes)
 print("IDs = ", ids)
 print("Nomes = ", nomes)
 
+alturas = [1.70, 1.80, 1.65, 1.75, 1.90]
+pesos = [65, 80, 58, 70, 95]
+
+imc = [round((peso / altura**2), 1) for altura, peso in zip(alturas, pesos)]
+print(imc)
